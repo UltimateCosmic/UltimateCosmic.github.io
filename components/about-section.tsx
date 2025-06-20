@@ -75,7 +75,7 @@ export function AboutSection() {
             <div className="bg-dark-background p-6 rounded-lg border border-dark-border flex flex-col items-center">
               <h3 className="text-xl font-semibold mb-4 text-dark-accent">Contact Information</h3>
               <img
-                src="/johan-white.png"
+                src="./johan-white.png"
                 alt="Johan Amador"
                 className="w-32 h-32 mt-4 mb-8 animate-fade-in animate-[float_3s_ease-in-out_infinite]"
                 style={{ animation: "fadeIn 1s ease-in, float 3s ease-in-out infinite" }}
