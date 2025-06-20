@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 15 15 15;
+  --foreground: 245 245 245;
+  --card: 26 26 26;
+  --card-foreground: 245 245 245;
+  --popover: 26 26 26;
+  --popover-foreground: 245 245 245;
+  --primary: 255 217 69; /* Amarillo */
+  --primary-foreground: 15 15 15;
+  --secondary: 160 160 160;
+  --secondary-foreground: 245 245 245;
+  --muted: 64 64 64;
+  --muted-foreground: 160 160 160;
+  --accent: 255 217 69; /* Amarillo */
+  --accent-foreground: 15 15 15;
+  --destructive: 255 100 100;
+  --destructive-foreground: 245 245 245;
+  --border: 42 42 42;
+  --input: 42 42 42;
+  --ring: 255 217 69; /* Amarillo */
+  --radius: 0.5rem;
+  --font-anton: "Anton", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-dark-background text-dark-foreground;
+  }
+}
+
+.font-anton {
+  font-family: var(--font-anton);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+/* Code block styling */
+code {
+  font-family: "GeistMono", monospace;
+  background-color: rgba(26, 26, 26, 0.5);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: #121212;
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Terminal effect */
+.terminal-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ffd945; /* Amarillo */
+  animation: typing 3.5s steps(40, end), blink 1s step-end infinite;
+}
+
+.code-line {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.code-comment {
+  color: #6a9955;
+}
+
+.code-keyword {
+  color: #569cd6;
+}
+
+.code-function {
+  color: #dcdcaa;
+}
+
+.code-string {
+  color: #ce9178;
+}
+
+.code-variable {
+  color: #9cdcfe;
+}
+
+.code-class {
+  color: #4ec9b0;
+}
+
+.code-operator {
+  color: #d4d4d4;
+}
+
+/* Fade-in animation for sections */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Timeline styling */
+.timeline-container {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 0;
+  width: 2px;
+  background: #2a2a2a;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -4px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffd945; /* Amarillo */
+}
+
+/* Skill tag styling */
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  border-color: #ffd945; /* Amarillo */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill-tag-icon {
+  margin-right: 0.5rem;
+  color: #ffd945; /* Amarillo */
+}
+
+/* Button hover fix */
+.button-hover-fix:hover {
+  color: #0f0f0f !important;
+}
