@@ -13,14 +13,41 @@ Welcome to my personal portfolio! Here you can find my featured projects, skills
 
 ## Featured Projects
 
-- **[Cinemark Perú Clone](https://cinemark-peru.vercel.app/)**  
-  Responsive clone of the Cinemark Perú website. Real-time movie listings, cinema info, and schedules. [Code](https://github.com/UltimateCosmic/cinemark-peru)
+<div align="center">
 
-- **[Anniversary Project](https://anniversary-project-sage.vercel.app/)**  
-  A digital memory corner and gift for a loved one. [Code](https://github.com/UltimateCosmic/anniversary-project)
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://cinemark-peru.vercel.app/">
+        <img src="./public/projects/cinemark-peru.png" alt="Cinemark Perú Clone Preview" width="200"/><br/>
+        <strong>Cinemark Perú Clone</strong>
+      </a>
+      <br/>
+      Responsive clone of the Cinemark Perú website. Works with official API.<br/>
+      <a href="https://github.com/UltimateCosmic/cinemark-peru">Code</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://anniversary-project-sage.vercel.app/">
+        <img src="./public/projects/anniversary-project.png" alt="Anniversary Project Preview" width="200"/><br/>
+        <strong>Anniversary Project</strong>
+      </a>
+      <br/>
+      A digital memory corner and gift for a loved one.<br/>
+      <a href="https://github.com/UltimateCosmic/anniversary-project">Code</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/UltimateCosmic/UltimateCosmic.github.io">
+        <img src="./public/projects/cosmodev.png" alt="Portfolio Preview" width="200"/><br/>
+        <strong>Personal Portfolio</strong>
+      </a>
+      <br/>
+      This very site! Modern UI, animated hero, project gallery, and more.<br/>
+      <a href="https://github.com/UltimateCosmic/cosmodev">Code</a>
+    </td>
+  </tr>
+</table>
 
-- **Personal Portfolio**  
-  This very site! Modern UI, animated hero, project gallery, and more. [Code](https://github.com/UltimateCosmic/cosmodev)
+</div>
 
 ## Features
 
@@ -45,7 +72,13 @@ pnpm dev # or npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to see the site.
 
-## 📄 License
+## Deployment
+
+The website is live at [https://cosmodev.me](https://cosmodev.me).
+
+This site is deployed to Namecheap using GitHub Actions for automated static export and upload. GitHub Pages only allows HTML, CSS, and JS files, so a custom workflow is used to deploy the generated static files to Namecheap hosting.
+
+## License
 
 This project is MIT licensed.
 

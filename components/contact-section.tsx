@@ -90,7 +90,10 @@ export function ContactSection() {
               </div>
             </div>
             <div className="bg-dark-background p-6 rounded-lg border border-dark-border">
-              <h3 className="text-xl font-semibold mb-2">Send me a message</h3>
+                <h3 className="text-xl font-semibold mb-2">Send me a message<span className="text-dark-accent">*</span></h3>
+                <p className="italic text-sm text-dark-secondary mb-4">
+                This form is currently in development. Submissions are not yet sent via email.
+                </p>
               <form className="space-y-4">
                 <div>
                   <input
