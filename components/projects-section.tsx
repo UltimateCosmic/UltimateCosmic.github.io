@@ -63,7 +63,7 @@ export function ProjectsSection() {
   }, [])
 
   return (
-    <section id="projects" ref={sectionRef} className="py-12 md:py-20 fade-in-section">
+    <section id="projects" ref={sectionRef} className="py-12 md:py-20 bg-dark-surface/50 fade-in-section">
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-[72rem]">
           <h2 className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl mb-8">

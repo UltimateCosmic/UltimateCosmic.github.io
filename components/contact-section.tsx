@@ -90,7 +90,7 @@ export function ContactSection() {
               </div>
             </div>
             <div className="bg-dark-background p-6 rounded-lg border border-dark-border">
-              <h3 className="text-xl font-semibold mb-4">Send me a message</h3>
+              <h3 className="text-xl font-semibold mb-2">Send me a message</h3>
               <form className="space-y-4">
                 <div>
                   <input

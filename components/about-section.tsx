@@ -42,9 +42,11 @@ export function AboutSection() {
           <div className="mt-4 grid gap-8 md:grid-cols-[2fr_1fr]">
             <div>
               <p className="text-dark-foreground mb-4">
-                Computer Science student in my final semester at PUCP, focused on software development. I'm motivated to
-                build efficient solutions with modern technologies like Java, React, SQL, and .NET. Self-taught and
-                passionate about participating in projects that pose real technical challenges.
+                Computer Science student in my final semester at PUCP{" "}
+                <span className="text-dark-accent">
+                  (No. 1 university in Peru for 13 consecutive years, Ranking QS).
+                </span>{" "}
+                I'm focused on software development and motivated to build efficient solutions with modern technologies like Java, React, SQL, and .NET. Self-taught and passionate about participating in projects that pose real technical challenges.
               </p>
               <p className="text-dark-foreground mb-4">
                 Currently developing my thesis on healthcare systems interoperability, learning about standards like HL7
@@ -57,7 +59,7 @@ export function AboutSection() {
                 approach.
               </p>
               <h3 className="text-xl font-semibold mb-2 text-dark-accent">Languages</h3>
-              <ul className="space-y-1 text-dark-secondary mb-6">
+              <ul className="list-disc pl-5 space-y-1 text-dark-secondary mb-6">
                 <li>English: Intermediate-Advanced (Level B2 – First Certificate in English, Cambridge)</li>
                 <li>Spanish: Native</li>
               </ul>
@@ -111,7 +113,7 @@ export function AboutSection() {
                   <a href="mailto:johan.amador@pucp.edu.pe" className="text-dark-accent hover:underline">
                     johan.amador@pucp.edu.pe
                   </a>
-                </li>                
+                </li>
               </ul>
             </div>
           </div>

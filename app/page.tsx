@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/hero-section"
 import { Navbar } from "@/components/navbar"
 import { ProjectsSection } from "@/components/projects-section"
+import { GallerySection } from "@/components/gallery-section"
 import { SkillsSection } from "@/components/skills-section"
 
 export default function Home() {
@@ -17,8 +18,9 @@ export default function Home() {
         <AboutSection />
         <ExperienceSection />
         <ProjectsSection />
-        <SkillsSection />
         <EducationSection />
+        <SkillsSection />        
+        <GallerySection />
         <ContactSection />
       </main>
       <Footer />
