@@ -17,7 +17,16 @@ Welcome to my personal portfolio! Here you can find my featured projects, skills
 
 <table>
   <tr>
-    <td align="center" width="33%">
+    <td align="center" width="25%">
+      <a href="https://grunge.vercel.app/">
+        <img src="./public/projects/grunge.png" alt="Grunge Merch Preview" width="200"/><br/>
+        <strong>Grunge Merch</strong>
+      </a>
+      <br/>
+      Web interface for an official grunge and rock bands merch store.<br/>
+      <a href="https://github.com/UltimateCosmic/grunge">Code</a>
+    </td>
+    <td align="center" width="25%">
       <a href="https://cinemark-peru.vercel.app/">
         <img src="./public/projects/cinemark-peru.png" alt="Cinemark Perú Clone Preview" width="200"/><br/>
         <strong>Cinemark Perú Clone</strong>
@@ -26,7 +35,7 @@ Welcome to my personal portfolio! Here you can find my featured projects, skills
       Responsive clone of the Cinemark Perú website. Works with official API.<br/>
       <a href="https://github.com/UltimateCosmic/cinemark-peru">Code</a>
     </td>
-    <td align="center" width="33%">
+    <td align="center" width="25%">
       <a href="https://anniversary-project-sage.vercel.app/">
         <img src="./public/projects/anniversary-project.png" alt="Anniversary Project Preview" width="200"/><br/>
         <strong>Anniversary Project</strong>
@@ -35,7 +44,7 @@ Welcome to my personal portfolio! Here you can find my featured projects, skills
       A digital memory corner and gift for a loved one.<br/>
       <a href="https://github.com/UltimateCosmic/anniversary-project">Code</a>
     </td>
-    <td align="center" width="33%">
+    <td align="center" width="25%">
       <a href="https://github.com/UltimateCosmic/UltimateCosmic.github.io">
         <img src="./public/projects/cosmodev.png" alt="Portfolio Preview" width="200"/><br/>
         <strong>Personal Portfolio</strong>

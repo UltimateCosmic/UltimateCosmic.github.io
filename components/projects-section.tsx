@@ -8,6 +8,15 @@ import Link from "next/link"
 const projects = [
   {
     id: 1,
+    title: "Grunge Merch",
+    description: "Interfaz web de una tienda de merch oficial de bandas de grunge y rock, con sistema de páginas de producto detalladas y galería de imágenes HD.",
+    image: "./projects/grunge.png",
+    technologies: ["Next.js", "React", "Tailwind CSS", "APIs", "Web Scraping"],
+    github: "https://github.com/UltimateCosmic/grunge",
+    demo: "https://grunge.vercel.app/",
+  },
+  {
+    id: 2,
     title: "Cinemark Perú Clone",
     description: "Responsive Cinemark Perú website clone using Next.js, TypeScript, and Cinemark API.",
     image: "./projects/cinemark-peru.png",
@@ -16,7 +25,7 @@ const projects = [
     demo: "https://cinemark-peru.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Anniversary Project",
     description: "A digital memory corner and gift for a loved one. Built with Next.js and Tailwind CSS.",
     image: "./projects/anniversary-project.png",
@@ -25,7 +34,7 @@ const projects = [
     demo: "https://anniversary-project-sage.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Personal Portfolio",
     description: "My personal portfolio website built with Next.js, React, Tailwind CSS, and TypeScript. Features a modern UI, animated hero section, project gallery, and responsive design.",
     image: "./projects/cosmodev.png",
