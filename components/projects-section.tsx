@@ -39,7 +39,7 @@ const projects = [
     description: "My personal portfolio website built with Next.js, React, Tailwind CSS, and TypeScript. Features a modern UI, animated hero section, project gallery, and responsive design.",
     image: "./projects/cosmodev.png",
     technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Shadcn/ui", "Lucide Icons"],
-    github: "https://github.com/UltimateCosmic/cosmodev",
+    github: "https://github.com/UltimateCosmic/UltimateCosmic.github.io",
     demo: "https://cosmodev.me/",
   },
 ]
