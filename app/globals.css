@@ -196,3 +196,92 @@ pre code {
 .button-hover-fix:hover {
   color: #0f0f0f !important;
 }
+
+/* Animaciones del patrón cyberpunk */
+@keyframes cyberpunkMove {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(-8px) translateY(4px);
+  }
+  50% {
+    transform: translateX(-4px) translateY(-8px);
+  }
+  75% {
+    transform: translateX(4px) translateY(-4px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes cyberpunkMove2 {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(6px) translateY(-6px);
+  }
+  66% {
+    transform: translateX(-10px) translateY(5px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes cyberpunkFloat {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(-3px) translateY(2px);
+  }
+  50% {
+    transform: translateX(2px) translateY(-4px);
+  }
+  75% {
+    transform: translateX(-1px) translateY(-2px);
+  }
+}
+
+@keyframes cyberpunkDrift {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  20% {
+    transform: translateX(5px) translateY(-3px);
+  }
+  40% {
+    transform: translateX(-2px) translateY(-6px);
+  }
+  60% {
+    transform: translateX(-8px) translateY(2px);
+  }
+  80% {
+    transform: translateX(3px) translateY(4px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes hexRotate {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-4px) translateY(3px) rotate(90deg);
+  }
+  50% {
+    transform: translateX(2px) translateY(-5px) rotate(180deg);
+  }
+  75% {
+    transform: translateX(6px) translateY(1px) rotate(270deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(360deg);
+  }
+}
