@@ -25,7 +25,7 @@ const config: Config = {
           muted: "#404040",
           foreground: "#F5F5F5",
           secondary: "#A0A0A0",
-          accent: "#FFD945",
+          accent: "#00F050" /*"#FFD945"*/,
           code: {
             bg: "#121212",
             comment: "#6A9955",

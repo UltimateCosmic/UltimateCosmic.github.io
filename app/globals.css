@@ -166,7 +166,7 @@ pre code {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #ffd945; /* Amarillo */
+  background: #00F050; /* Verde */
 }
 
 /* Skill tag styling */
@@ -182,14 +182,14 @@ pre code {
 }
 
 .skill-tag:hover {
-  border-color: #ffd945; /* Amarillo */
+  border-color: #00F050; /* Verde */
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .skill-tag-icon {
   margin-right: 0.5rem;
-  color: #ffd945; /* Amarillo */
+  color: #00F050; /* Verde */
 }
 
 /* Button hover fix */

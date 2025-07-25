@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
   const [currentLine, setCurrentLine] = useState(0)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const codeLines = [
     {
       id: 1,
@@ -59,6 +60,25 @@ export function HeroSection() {
     return () => clearTimeout(timer)
   }, [])
 
+  // Manejo del movimiento del mouse para el patrón topográfico
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = sectionRef.current?.getBoundingClientRect()
+      if (rect) {
+        setMousePosition({
+          x: ((e.clientX - rect.left) / rect.width) * 100,
+          y: ((e.clientY - rect.top) / rect.height) * 100,
+        })
+      }
+    }
+
+    const section = sectionRef.current
+    if (section) {
+      section.addEventListener('mousemove', handleMouseMove)
+      return () => section.removeEventListener('mousemove', handleMouseMove)
+    }
+  }, [])
+
   return (
     <section
       id="home"
@@ -66,18 +86,72 @@ export function HeroSection() {
       className="min-h-screen flex items-center py-20 relative overflow-hidden"
       style={{ position: "relative" }}
     >
-      {/* Spotlights de color en los lados */}
+      {/* Patrón topográfico animado */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-0"
         style={{
-          background:
-            `radial-gradient(400px 200px at 0% 20%, rgba(255,217,69,0.18), transparent 70%),` +
-            `radial-gradient(400px 200px at 100% 80%, rgba(255,217,69,0.22), transparent 70%)` +
-            `,radial-gradient(300px 150px at 50% 100%, rgba(255,217,69,0.10), transparent 80%)`,
-          transition: "background 0.5s",
+          background: `
+            radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
+              rgba(0,240,80,0.15) 0%, 
+              rgba(0,240,80,0.08) 25%, 
+              rgba(0,240,80,0.04) 50%, 
+              transparent 70%
+            )
+          `,
+          transition: 'background 0.3s ease-out',
         }}
-      />
+      >
+        {/* Líneas topográficas */}
+        <svg
+          className="absolute inset-0 w-full h-full"
+          style={{
+            transform: `translate(${(mousePosition.x - 50) * 0.02}px, ${(mousePosition.y - 50) * 0.02}px)`,
+            transition: 'transform 0.3s ease-out',
+          }}
+        >
+          <defs>
+            <pattern id="topographic" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+              {/* Líneas topográficas concéntricas */}
+              <circle cx="60" cy="60" r="10" fill="none" stroke="rgba(0,240,80,0.1)" strokeWidth="0.5"/>
+              <circle cx="60" cy="60" r="20" fill="none" stroke="rgba(0,240,80,0.08)" strokeWidth="0.5"/>
+              <circle cx="60" cy="60" r="30" fill="none" stroke="rgba(0,240,80,0.06)" strokeWidth="0.5"/>
+              <circle cx="60" cy="60" r="40" fill="none" stroke="rgba(0,240,80,0.04)" strokeWidth="0.5"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(0,240,80,0.02)" strokeWidth="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#topographic)" />
+        </svg>
+        
+        {/* Líneas adicionales que siguen el cursor */}
+        <div
+          className="absolute w-96 h-96 rounded-full border border-dark-accent/10"
+          style={{
+            left: `${mousePosition.x}%`,
+            top: `${mousePosition.y}%`,
+            transform: 'translate(-50%, -50%)',
+            transition: 'all 0.3s ease-out',
+          }}
+        />
+        <div
+          className="absolute w-64 h-64 rounded-full border border-dark-accent/15"
+          style={{
+            left: `${mousePosition.x}%`,
+            top: `${mousePosition.y}%`,
+            transform: 'translate(-50%, -50%)',
+            transition: 'all 0.4s ease-out',
+          }}
+        />
+        <div
+          className="absolute w-32 h-32 rounded-full border border-dark-accent/20"
+          style={{
+            left: `${mousePosition.x}%`,
+            top: `${mousePosition.y}%`,
+            transform: 'translate(-50%, -50%)',
+            transition: 'all 0.5s ease-out',
+          }}
+        />
+      </div>
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px]">
           <div className="flex flex-col justify-center space-y-8">
